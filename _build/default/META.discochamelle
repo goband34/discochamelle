@@ -1,0 +1,6 @@
+description = ""
+requires = "cohttp-lwt-unix"
+archive(byte) = "discochamelle.cma"
+archive(native) = "discochamelle.cmxa"
+plugin(byte) = "discochamelle.cma"
+plugin(native) = "discochamelle.cmxs"

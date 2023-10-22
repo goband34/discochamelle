@@ -1,0 +1,19 @@
+lib: [
+  "_build/install/default/lib/discochamelle/META"
+  "_build/install/default/lib/discochamelle/discochamelle.a"
+  "_build/install/default/lib/discochamelle/discochamelle.cma"
+  "_build/install/default/lib/discochamelle/discochamelle.cmi"
+  "_build/install/default/lib/discochamelle/discochamelle.cmt"
+  "_build/install/default/lib/discochamelle/discochamelle.cmx"
+  "_build/install/default/lib/discochamelle/discochamelle.cmxa"
+  "_build/install/default/lib/discochamelle/discochamelle.ml"
+  "_build/install/default/lib/discochamelle/discochamelle__Rest.cmi"
+  "_build/install/default/lib/discochamelle/discochamelle__Rest.cmt"
+  "_build/install/default/lib/discochamelle/discochamelle__Rest.cmx"
+  "_build/install/default/lib/discochamelle/dune-package"
+  "_build/install/default/lib/discochamelle/opam"
+  "_build/install/default/lib/discochamelle/rest.ml"
+]
+libexec: [
+  "_build/install/default/lib/discochamelle/discochamelle.cmxs"
+]
