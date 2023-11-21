@@ -2,4 +2,8 @@
  (public_name discochamelle)
  (name discochamelle)
  (libraries 
-   cohttp-lwt-unix))
+   cohttp-lwt-unix
+   conduit-lwt
+   sexplib
+   yojson)
+ (preprocess (pps ppx_sexp_conv ppx_yojson_conv))) 

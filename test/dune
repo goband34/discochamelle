@@ -1,3 +1,4 @@
 (test
  (name discochamelle_test)
- (libraries discochamelle))
+ (libraries discochamelle)
+ (deps (glob_files "config.scm")))

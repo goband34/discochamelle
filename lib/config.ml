@@ -1,6 +1,17 @@
-let base_url () =
-  "https://dcdcf503-2c17-4a09-ac05-7d49cf81a7f9.mock.pstmn.io/https://discord.com/api/v10/"
+open Sexplib.Std
 
-let url_for_endpoint s =
-  let b = base_url () in
-  b ^ s
+type t = {
+  token: string;
+  base_url: string
+} [@@deriving sexp]
+
+let loaded_config: t option ref = ref None
+
+let read_config () =
+  match !loaded_config with
+  | None -> 
+      Sexplib.Sexp.load_sexp "config.scm" |>
+      t_of_sexp
+  | Some c -> c
+
+
