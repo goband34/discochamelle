@@ -1,0 +1,19 @@
+type user = {
+    id: Snowflake.t;
+    username: string;
+    discriminator: string;
+    global_name: string option;
+    avatar: string option;
+    bot: bool [@yojson.option];
+    system: bool [@yojson.option];
+    mfa_enabled: bool [@yojson.option];
+    banner: string option [@yojson.option];
+    accent_color: int option [@yojson.option];
+    locale: string [@yojson.option];
+    verified: bool [@yojson.option];
+    email: string option [@yojson.option];
+    flags: int [@yojson.option];
+    premium_type: int [@yojson.option];
+    public_flags: int [@yojson.option];
+    avatar_decoration: string option [@yojson.option];
+} [@@deriving yojson]
