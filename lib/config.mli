@@ -4,3 +4,4 @@ type t = {
 } [@@deriving sexp]
 
 val read_config: unit -> t
+val set_config_file: string -> unit

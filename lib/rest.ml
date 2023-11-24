@@ -16,4 +16,10 @@ let make_request endpoint =
 (* TODO: parse body into guild array when the types are done *)
 let my_guilds () =
   let* b = make_request "users/@me/guilds" in
-  b |> Cohttp_lwt.Body.to_string
+  let* s = Cohttp_lwt.Body.to_string b in
+  let json = Yojson.Safe.from_string s in
+  let r  = match json with
+    | `List xs -> List.map Guild.t_of_yojson xs
+    | _ -> raise (Failure (Printf.sprintf "my_guilds: List expected. Received:\n%s" s))
+  in
+  Lwt.return r
